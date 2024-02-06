@@ -23,22 +23,22 @@ export function Timer ({initialState, title}){
 
 
     return(
-
+<>
         <div className="container">
-            <div className="circle">
-
                 <h3 className="text">
 
                 {title} Timer: {Math.floor(count / 60).toString().padStart(2, '0')}:{(count % 60).toString().padStart(2, '0')} 
 
             </h3>
-        
-        </div>
-
-            <button className="btn" onClick={resetTimer}>Resend</button>
-
+            <div className="circle">
 
         </div>
+
+           {  count <= 0 && < button className="btn" onClick={resetTimer}> Resend </button>}
+     </div>
+           
+           
+    </>
     )
 
 
